@@ -12,8 +12,8 @@ var {
 
 var todo = React.createClass({
 
-  updateTaskList: function (text) {
-    TasksScreen.loadTasks(TASK_BUFFER);
+  updateTaskList: function () {
+    TasksScreen.loadTasks();
   },
 
   onRightButtonPress: function () {
@@ -32,7 +32,7 @@ var todo = React.createClass({
         initialRoute={{
           title: 'Task List',
           component: TasksScreen,
-          rightButtonTitle: 'Add Task',
+          rightButtonTitle: 'Add New Task',
           onRightButtonPress: this.onRightButtonPress
         }} />
     );
